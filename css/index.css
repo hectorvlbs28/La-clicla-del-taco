@@ -1,0 +1,71 @@
+:root {
+  --color-naranja: rgb(255, 103, 31);
+  --color-naranja-50: rgba(255, 103, 31, 0.9);
+  --color-rojo: rgb(210, 91, 115);
+  --background: rgb(254, 243, 236);
+  --background-50: rgba(254, 243, 236, 0.5);
+  --facebook: rgb(59, 89, 152);
+  --twitter: rgb(29, 161, 242);
+  --instagram: rgb(255, 45, 85);
+  --gmail: rgb(211, 47, 47);
+}
+
+.fb {
+  color: var(--facebook);
+}
+
+.tw {
+  color: var(--twitter);
+}
+
+.ig {
+  color: var(--instagram);
+}
+
+.gm {
+  color: var(--gmail);
+}
+
+.header {
+  background-color: var(--background);
+}
+
+.find-button {
+  background: var(--color-naranja);
+}
+
+.menu-text {
+  font-family: 'Merriweather Sans', sans-serif;
+  color: var(--color-rojo);
+}
+
+.menu-text-button {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 400;
+  color: var(--color-naranja);
+  background: none;
+  border: none;
+  border-radius: 6px;
+  margin-top: 1vh;
+  margin-right: 1vh;
+}
+
+.menu-text-button:hover {
+  background-color: var(--color-naranja-50);
+  color: var(--background);
+}
+
+.social {
+  width: 20vh;
+  height: 4vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1vh;
+}
+
+.social-button {
+  background: none;
+  border: none;
+}
