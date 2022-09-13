@@ -60,12 +60,25 @@
   height: 4vh;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
   gap: 1vh;
+  margin-right: 1vh;
 }
 
 .social-button {
   background: none;
   border: none;
+}
+
+.bars-button:focus {
+  outline: none;
+  border: none;
+}
+
+.div-collapsed {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
