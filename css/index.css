@@ -1,6 +1,6 @@
 :root {
   --color-naranja: rgb(255, 103, 31);
-  --color-naranja-50: rgba(255, 103, 31, 0.9);
+  --color-naranja-50: rgba(255, 103, 31, 0.5);
   --color-rojo: rgb(210, 91, 115);
   --background: rgb(254, 243, 236);
   --background-50: rgba(254, 243, 236, 0.5);
@@ -8,6 +8,7 @@
   --twitter: rgb(29, 161, 242);
   --instagram: rgb(255, 45, 85);
   --gmail: rgb(211, 47, 47);
+  --white: rgb(255, 255, 255);
 }
 
 .fb {
@@ -56,14 +57,7 @@
 }
 
 .social {
-  width: 20vh;
-  height: 4vh;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 1vh;
-  margin-right: 1vh;
 }
 
 .social-button {
@@ -96,6 +90,12 @@
   gap: 1vh;
 }
 
+.custom-modal {
+  width: 100%;
+  background-color: var(--background);
+  border-radius: 8px;
+}
+
 @media (max-width: 768px) {
   .banner {
     display: none;
@@ -105,5 +105,8 @@
   }
   .footer {
     display: flex;
+  }
+  .social {
+    display: none;
   }
 }

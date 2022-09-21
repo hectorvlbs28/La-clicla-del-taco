@@ -3,25 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>La clicla del taco</title>
 
     <link rel="icon" href="img/icono.jpg" />
-
-    <!-- Latest compiled and minified CSS -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/boostrap/4.1.3/css/boostrap.min.css" />
-     -->
-
     <link rel="stylesheet" href="css/index.css" />
-
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
       crossorigin="anonymous"
     />
-
     <link href="https://fonts.googleapis.com/css?family=Chewy|Open+Sans:300,400" rel="stylesheet" />
-
     <link
       rel="stylesheet"
       href="https://fontawesome.com/realeses/v5.6.0/css/all.css"
@@ -29,26 +22,6 @@
       crossorigin="
 			anonymous"
     />
-
-    <!-- Plugins de JS -->
-    <script src="https://kit.fontawesome.com/4dc9a857d5.js" crossorigin="anonymous"></script>
-
-    <!-- jQuery library -->
-    <script src="js/jquery.slim.min.js"></script>
-
-    <!-- Popper JS -->
-    <script src="js/popper.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-      crossorigin="anonymous"
-    ></script>
-
-    <script src="https://kit.fontawesome.com/e6f4c807b3.js" crossorigin="anonymous"></script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -67,44 +40,42 @@
         <button
           class="navbar-toggler bars-button"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
-          aria-label="Toggle navigation"
         >
           <i class="fa-solid fa-bars fa-2xl bars-button"></i>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 div-collapsed">
-            <li class="nav-item">
-              <button class="menu-text-button d-sm-none d-md-block" href="#">Inicio</button>
-            </li>
+          <ul class="navbar-nav me-auto mb-lg-0 div-collapsed">
+            <button class="menu-text-button d-sm-none d-md-block mb-3" href="#">Inicio</button>
 
-            <li class="nav-item">
-              <button class="menu-text-button" href="#">Sobre nosotros</button>
-            </li>
+            <button class="menu-text-button mb-3" style="width: 150px" href="#">Sobre nosotros</button>
 
-            <li class="nav-item dropdown">
-              <button
-                class="dropdown-toggle menu-text-button d-sm-none d-md-block"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Menú
-              </button>
-              <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item menu-text" href="#">Tacos 1</a></li>
-                <li><a class="dropdown-item menu-text" href="#">Tacos 2</a></li>
-              </ul>
-            </li>
+            <button
+              class="menu-text-button mb-3"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+            >
+              Menú
+            </button>
 
-            <div class="d-sm-none d-md-block mt-4">
-              <div class="social">
+            <div
+              style="
+                width: 150px;
+                height: 5vh;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <div class="d-sm-none d-md-block">
                 <button class="social-button"><i class="fa-brands fa-facebook fb"></i></button>
                 <button class="social-button"><i class="fa-brands fa-square-instagram ig"></i></button>
                 <button class="social-button"><i class="fa-brands fa-twitter tw"></i></button>
@@ -112,14 +83,18 @@
               </div>
             </div>
           </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
-            <button class="btn btn-danger menu-text find-button" type="submit">Buscar</button>
-          </form>
+
+          <div class="d-sm-none d-md-block">
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
+              <button class="btn btn-danger menu-text find-button" type="submit">Buscar</button>
+            </form>
+          </div>
         </div>
       </div>
     </nav>
 
+    <!-- Banner -->
     <div class="container-fluid p-0 banner">
       <div class="row">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
@@ -171,6 +146,109 @@
       </div>
     </div>
 
+    <!-- Modal -->
+    <div
+      class="modal fade bg-none"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog bg-none">
+        <div class="modal-content">
+          <div class="custom-modal">
+            <div class="modal-header" style="border: none">
+              <h2 class="modal-title" id="exampleModalLabel">Menú</h2>
+              <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="border: none">
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <th
+                      scope="row"
+                      style="
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        border: none;
+                      "
+                    >
+                      <button class="menu-text-button" style="width: 60%" href="#">
+                        <h4>Taquerias zona norte</h4>
+                      </button>
+                    </th>
+                    <th
+                      scope="row"
+                      style="
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        border: none;
+                      "
+                    >
+                      <button class="menu-text-button" style="width: 60%" href="#">
+                        <h4>Taquerias zona centro</h4>
+                      </button>
+                    </th>
+                    <th
+                      scope="row"
+                      style="
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        border: none;
+                      "
+                    >
+                      <button class="menu-text-button" style="width: 60%" href="#"><h4>Taquerias zona sur</h4></button>
+                    </th>
+                    <th
+                      scope="row"
+                      style="
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        border: none;
+                      "
+                    >
+                      <button class="menu-text-button" style="width: 60%" href="#"><h4>Sobre nosotros</h4></button>
+                    </th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer" style="border: none">
+              <div
+                style="
+                  width: 100%;
+                  height: 5vh;
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <div>
+                  <button class="social-button"><i class="fa-brands fa-facebook fb"></i></button>
+                  <button class="social-button"><i class="fa-brands fa-square-instagram ig"></i></button>
+                  <button class="social-button"><i class="fa-brands fa-twitter tw"></i></button>
+                  <button class="social-button"><i class="fa-solid fa-envelope gm"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer>
       <div class="footer">
         <button class="social-button"><i class="fa-brands fa-facebook fb"></i></button>
@@ -179,5 +257,15 @@
         <button class="social-button"><i class="fa-solid fa-envelope gm"></i></button>
       </div>
     </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://kit.fontawesome.com/e6f4c807b3.js" crossorigin="anonymous"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="https://kit.fontawesome.com/4dc9a857d5.js" crossorigin="anonymous"></script>
   </body>
 </html>
