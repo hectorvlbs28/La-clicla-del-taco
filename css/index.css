@@ -106,7 +106,7 @@
   right: 20px;
   width: 50px;
   height: 50px;
-  background: url(/La-clicla-del-taco/img/flecha.jpg);
+  background: url(/img/flecha.jpg);
 }
 
 /*Preload*/
@@ -194,37 +194,37 @@
 
 .grid .photo1{
   height: 400px;
-  background: url(/La-clicla-del-taco/assets/img/TacoReal.jpg);
+  background: url(/assets/img/TacoReal.jpg);
   background-size: cover;
   background-position: left;
 }
 .grid .photo2{
   height: 300px;
-  background: url(/La-clicla-del-taco/assets/img/NWTacoSonora1.png);
+  background: url(/assets/img/NWTacoSonora1.png);
   background-size: cover;
   background-position: left;
 }
 .grid .photo3{
   height: 300px;
-  background: url(/La-clicla-del-taco/assets/img/TacosJohnny.jpg);
+  background: url(/assets/img/TacosJohnny.jpg);
   background-size: cover;
   background-position: left;
 }
 .grid .photo4{
   height: 300px;
-  background: url(/La-clicla-del-taco/assets/img/TaqueriasElChino.jpg);
+  background: url(/assets/img/TaqueriasElChino.jpg);
   background-size: cover;
   background-position: left;
 }
 .grid .photo5{
   height: 400px;
-  background: url(/La-clicla-del-taco/assets/img/TaqueriaIrazema.png);
+  background: url(/assets/img/TaqueriaIrazema.png);
   background-size: cover;
   background-position: left;
 }
 .grid .photo6{
   height: 200px;
-  background: url(/La-clicla-del-taco/assets/img/TaqueriaLosReportados.png);
+  background: url(/assets/img/TaqueriaLosReportados.png);
   background-size: cover;
   background-position: left;
 }
@@ -274,31 +274,31 @@ footer{
 
 .gridFooter .photo1{
   height: 200px;
-  background: url(/La-clicla-del-taco/assets/img/TacoReal.jpg);
+  background: url(/assets/img/TacoReal.jpg);
   background-size: cover;
   background-position: left;
 }
 .gridFooter .photo2{
   height: 100px;
-  background: url(/La-clicla-del-taco/assets/img/NWTacoSonora1.png);
+  background: url(/assets/img/NWTacoSonora1.png);
   background-size: cover;
   background-position: left;
 }
 .gridFooter .photo3{
   height: 100px;
-  background: url(/La-clicla-del-taco/assets/img/TacosJohnny.jpg);
+  background: url(/assets/img/TacosJohnny.jpg);
   background-size: cover;
   background-position: left;
 }
 .gridFooter .photo4{
   height: 100px;
-  background: url(/La-clicla-del-taco/assets/img/TaqueriasElChino.jpg);
+  background: url(/assets/img/TaqueriasElChino.jpg);
   background-size: cover;
   background-position: left;
 }
 .gridFooter .photo5{
   height: 200px;
-  background: url(/La-clicla-del-taco/assets/img/TaqueriaIrazema.png);
+  background: url(/assets/img/TaqueriaIrazema.png);
   background-size: cover;
   background-position: left;
 }
