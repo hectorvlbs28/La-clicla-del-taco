@@ -163,7 +163,7 @@
   position: relative;
 }
 
-/*.fecha{
+.fecha{
   font-family: 'Merriweather Sans', sans-serif;
   position: absolute;
   right: 10px;
@@ -171,11 +171,48 @@
   padding: 5px 10px;
   color: #aaa;
   font-size: 14px;
-  background: url(/La-clicla-del-taco/img/globo.jpg);
+  background: url(/img/globo.jpg);
   background-size: cover;
   background-position: center top;
   height: 40px;
-}*/
+}
+
+/*======================================
+BreadCrumb
+========================================*/
+
+.breadcrumb-item+.breadcrumb-item::before{
+  position: relative;
+  background: url(/img/separador.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  padding-right: .5rem;
+  color: #6c757d;
+  content: url(/img/espacio.png);
+  width: 60px;
+  left: -10px;
+  line-height: 50px;
+}
+
+/*======================================
+Contenido
+========================================*/
+
+.fechaArticulo{
+
+  padding: 12px 32px;
+  color: #aaa;
+  font-size: 15px;
+  background: url(../img/globo.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 60px;
+}
+
+
+
+
 
 .grid figure{
   font-family: 'Merriweather Sans', sans-serif;
@@ -356,6 +393,10 @@ footer{
     height: 120px;
   }
   .grid figure p{
+    font-size: 14px;
+  }
+
+  .opiniones p{
     font-size: 14px;
   }
 }

@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>La clicla del taco</title>
+
+    <link rel="icon" href="img/icono.jpg" />
+    <link rel="stylesheet" href="css/jquery.jdSlider.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/boostrap/4.1.3/css/boostrap.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Chewy|Open+Sans:300,400"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fontawesome.com/realeses/v5.6.0/css/all.css"
+      integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h"
+      crossorigin="
+			anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&family=Merriweather+Sans:wght@300&family=Qwitcher+Grypen&family=Roboto+Mono:wght@100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!--PreLoad--
+    <div id="preload">
+      <div id="porcentajeCarga">0%</div>
+      <div id="lineaCarga">
+        <div id="rellenoCarga"></div>
+      </div>
+      <div id="estadoCarga"></div>
+    </div>
+    Preload-->
+
+    <nav class="navbar navbar-expand-sm header">
+      <div class="container-fluid p-2">
+        <a class="navbar-brand" href="#">
+          <img
+            src="./assets/img/Logo.png"
+            alt="La clica del taco."
+            width="204"
+            height="106"
+            class="rounded"
+          />
+        </a>
+
+        <button
+          class="navbar-toggler bars-button"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-bars fa-2xl bars-button"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <button class="menu-text-button d-sm-none d-md-block" href="#">
+            Inicio
+          </button>
+
+          <button class="menu-text-button d-sm-none d-md-block" href="#">
+            Inicio
+          </button>
+
+          <button class="menu-text-button" style="width: 150px" href="#">
+            Sobre nosotros
+          </button>
+
+          <button
+            class="menu-text-button"
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+          >
+            Menú
+          </button>
+
+          <div
+            class="mt-2"
+            style="
+              width: 150px;
+              height: 6vh;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <div class="d-sm-none d-md-block">
+              <button class="social-button">
+                <i class="fa-brands fa-facebook fb"></i>
+              </button>
+              <button class="social-button">
+                <i class="fa-brands fa-square-instagram ig"></i>
+              </button>
+              <button class="social-button">
+                <i class="fa-brands fa-twitter tw"></i>
+              </button>
+              <button class="social-button">
+                <i class="fa-solid fa-envelope gm"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="pr-4 pr-lg-5 mt-2">
+            <i
+              class="fas fa-search lead"
+              data-bs-toggle="collapse"
+              data-bs-target="#buscador"
+            ></i>
+          </div>
+
+          <div id="buscador" class="collapse">
+            <div class="input-group float-right w-100 ml-4">
+              <form class="d-flex">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Buscar"
+                  aria-label="Search"
+                />
+                <button
+                  class="btn btn-danger menu-text find-button"
+                  type="submit"
+                >
+                  Buscar
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Modal -->
+    <div
+      class="modal fade bg-none"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog bg-none">
+        <div class="modal-content">
+          <div class="custom-modal">
+            <div class="modal-header" style="border: none">
+              <h2 class="modal-title" id="exampleModalLabel">Menú</h2>
+              <button
+                type="button"
+                class="btn-close text-dark"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body" style="border: none">
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <th
+                      scope="row"
+                      style="
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        border: none;
+                      "
+                    >
+                      <button
+                        class="menu-text-button"
+                        style="width: 60%"
+                        href="#"
+                      >
+                        <h4>Taquerias zona norte</h4>
+                      </button>
+                    </th>
+                    <th
+                      scope="row"
+                      style="
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        border: none;
+                      "
+                    >
+                      <button
+                        class="menu-text-button"
+                        style="width: 60%"
+                        href="#"
+                      >
+                        <h4>Taquerias zona centro</h4>
+                      </button>
+                    </th>
+                    <th
+                      scope="row"
+                      style="
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        border: none;
+                      "
+                    >
+                      <button
+                        class="menu-text-button"
+                        style="width: 60%"
+                        href="#"
+                      >
+                        <h4>Taquerias zona sur</h4>
+                      </button>
+                    </th>
+                    <th
+                      scope="row"
+                      style="
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        border: none;
+                      "
+                    >
+                      <button
+                        class="menu-text-button"
+                        style="width: 60%"
+                        href="#"
+                      >
+                        <h4>Sobre nosotros</h4>
+                      </button>
+                    </th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer" style="border: none">
+              <div
+                style="
+                  width: 100%;
+                  height: 5vh;
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <div>
+                  <button class="social-button">
+                    <i class="fa-brands fa-facebook fb"></i>
+                  </button>
+                  <button class="social-button">
+                    <i class="fa-brands fa-square-instagram ig"></i>
+                  </button>
+                  <button class="social-button">
+                    <i class="fa-brands fa-twitter tw"></i>
+                  </button>
+                  <button class="social-button">
+                    <i class="fa-solid fa-envelope gm"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Contenido Blog-->
+    <div class="container-fluid bg-white contenidoInicio pb-4">
+      <div class="container">
+        <!--BreadCrumb-->
+        <a href="categorias.html">
+          <button class="d-block d-sm-none btn btn-info btn-sm mb-2">
+            Regresar
+          </button>
+        </a>
+
+        <ul class="breadcrumb bg-white p-0 mb-2 mb-md-4 breadArticulo">
+          <li class="breadcrumb-item inicio">
+            <a href="index.html">Inicio</a>
+          </li>
+
+          <li class="breadcrumb-item">
+            <a href="categorias.html">Taquerias Norte</a>
+          </li>
+          <li class="breadcrumb-item active">Taco Real</li>
+        </ul>
+
+        <div class="row">
+          <!--Columna Izq-->
+          <div class="col-12 col-md-8 col-lg-9 p-0 pr-lg-5">
+            <div class="container">
+              <div class="d-flex">
+                <div class="fechaArticulo">11/03/2022</div>
+
+                <h3 class="tituloArticulo text-right text-muted pl-3 pt-lg-2">
+                  Taco Real
+                </h3>
+              </div>
+
+              <img
+                src="./assets/img/TacoReal.jpg"
+                alt="Taco Real"
+                class="img-fluid"
+              />
+
+              <p class="textoArticulo">
+                Si vives en Hermosillo o vienes de visita a la ciudad y buscas
+                tacos de carne asada y más, Taco Real es una excelente opción
+                que no te va a defraudar.
+              </p>
+              <p class="textoArticulo">
+                Buenísimos tacos, variedad de cortes y platillos en un lugar muy
+                bonito, refrigerado y con terraza bar a precio bastante
+                asequible, Taco Real es un lugar que debes conocer y un menú que
+                debes disfrutar.
+              </p>
+              <p class="textoArticulo">
+                Para conocer el Asadero Taco Real Beer & Grill, como
+                oficialmente se llama (aunque de ahora en adelante le llamaremos
+                Taco Real), nos lanzamos al que está ubicado en el bulevar
+                Rodríguez.
+              </p>
+              <p class="textoArticulo">
+                Actualmente cuenta con dos sucursales, uno el Portillo (Blvd.
+                López Portillo esq. con calle Israel Gonzalez Col. Misión del
+                Real) y Sucursal Rodríguez (Blvd. Rodríguez esq. con Nuevo León,
+                Col. San Benito).
+              </p>
+              <!--Publicidad-->
+              <img src="assets/img/Anuncio3.jpg" class="img-fluid" />
+
+              <h3 class="tituloArticulo">Nuestra experiencia en Taco Real</h3>
+              <p class="textoArticulo">
+                La atención fue muy buena en todo momento a pesar de que no
+                tenían verdura en el segundo piso, los meseros fueron muy
+                amables e incluso se ofrecieron a llevarla ellos.
+              </p>
+              <p class="textoArticulo">
+                La comida estuvo riquísima, probamos los tradicionales tacos de
+                asada, frijoles refritos y una cazuela con champiñones y queso
+                gratinado.
+              </p>
+              <p class="textoArticulo">
+                El tiempo de espera fue muy bueno y a pesar de que aún no tenían
+                servicio de barra, el mesero se ofreció a preparar las bebidas
+                por lo que no tuvimos problema con las bebidas.
+              </p>
+
+              <!--Compartir en Redes-->
+              <div class="float-right my-3 btnCompartir">
+                <div class="btn-group">
+                  <button
+                    type="button"
+                    class="btn border-0 text-white"
+                    style="background: #1475e0"
+                  >
+                    <span class="fab fa-facebook pr-1"></span>
+                    Facebook
+                    <span class="lead pl-1">3</span>
+                  </button>
+                </div>
+
+                <div class="btn-group">
+                  <button
+                    type="button"
+                    class="btn border-0 text-white"
+                    style="background: #00a6ff"
+                  >
+                    <span class="fab fa-twitter pr-1"></span>
+                    Twitter
+                    <span class="lead pl-1">3</span>
+                  </button>
+                </div>
+
+                <div class="btn-group">
+                  <button
+                    type="button"
+                    class="btn border-0 text-white"
+                    style="background: #dd4d41"
+                  >
+                    <span class="fab fa-google-plus pr-1"></span>
+                    Google
+                    <span class="lead pl-1">3</span>
+                  </button>
+                </div>
+              </div>
+
+              <!--Avanzar - Retroceder-->
+              <div class="clearfix"></div>
+              <div class="d-md-flex justify-content-between mb-3 d-none">
+                <a href="articulos.html">Leer Articulo Anterior</a>
+                <a href="articulos.html">Leer Articulo Siguiente</a>
+              </div>
+              <div class="clearfix"></div>
+
+              <!--Publicidad-->
+              <img src="assets/img/Anuncio4.jpg" class="img-fluid" />
+
+              <!--Bloque de Opiniones-->
+              <h3 style="color: #8e4876">Opiniones</h3>
+
+              <hr style="border: 1px solid #e7780f" />
+
+              <div class="row opiniones">
+                <div class="col-3 col-sm-4 col-lg-2 p-2">
+                  <img src="assets/img/comment1.jpeg" class="img-thumbnail" />
+                </div>
+
+                <div class="col-9 col-sm-8 col-lg-10 p-2 text-muted">
+                  <p>
+                    La barra de ingredientes y el servicio siempre excelente. El
+                    sabor de los tacos desafortunadamente ha ido decayendo,
+                    considerando el precio, y las tortillas que utilizan se
+                    rompen muy fácil. El “pastor” sabe más bien a carne de res
+                    adobada, y las tortillas de maíz, en esta ocasión, fue muy
+                    notorio que ya estaban un poco pasadas.
+                  </p>
+
+                  <span class="small float-end"
+                    >Arturo Carmona | 22.10.2022</span
+                  >
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-9 col-sm-8 col-lg-10 p-2 text-muted">
+                  <p>
+                    Atención rápida y muy buena. De los mejores tacos de asada y
+                    al pastor que hay. Tiene un menú variado que incluye papa
+                    asada, costillas, diferentes tipos de quesadillas y más.
+                    Super recomendado :)
+                  </p>
+
+                  <span class="small float-end"
+                    >Daniela Martinez | 22.10.2022</span
+                  >
+                </div>
+
+                <div class="col-3 col-sm-4 col-lg-2 p-2">
+                  <img src="assets/img/comment3.jpeg" class="img-thumbnail" />
+                </div>
+              </div>
+
+              <hr style="border: 1px solid #e7780f" />
+
+              <!--Formulario de Opiniones-->
+              <form>
+                <label class="text-muted lead"
+                  >Cuentanos tu experiencia en esta taqueria</label
+                >
+
+                <div class="row">
+                  <div class="col-12 col-md-8 col-lg-8">
+                    <div class="input-group-lg">
+                      <input
+                        type="text"
+                        class="form-control my-3"
+                        placeholder="Tu Nombre"
+                      />
+
+                      <input
+                        type="email"
+                        class="form-control my-3"
+                        placeholder="Tu email"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="d-none d-md-block col-md-4 col-lg-3">
+                    <img
+                      src="img/subirFoto.png"
+                      class="img-fluid mt-md-3 mt-xl-2"
+                    />
+                  </div>
+                </div>
+                <textarea
+                  class="form-control my-3"
+                  rows="7"
+                  placeholder="Escribe aqui tu opinion"
+                ></textarea>
+
+                <input
+                  type="submit"
+                  class="btn btn-dark btn-lg btn-block"
+                  value="Enviar"
+                />
+              </form>
+
+              <!--Deslizador de Articulos-->
+
+              <section class="jd-slider deslizadorArticulos my-4">
+                <h2>Articulos relacionados</h2>
+                <div class="slide-inner">
+                  <ul class="slide-area">
+                    <li class="px-3">
+                      <a href="articulos.html" class="text-secondary">
+                        <img
+                          src="assets/img/TaqueriaTaCarbon.jpg"
+                          alt="Taqueria"
+                          class="img-fluid"
+                        />
+                        <h6 class="py-2">Taqueria TaCarbon</h6>
+                      </a>
+                      <p class="small">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sed in consequat tortor.
+                      </p>
+                    </li>
+                    <li class="px-3">
+                      <a href="articulos.html" class="text-secondary">
+                        <img
+                          src="assets/img/NWTacoSonora2.png"
+                          alt="Taqueria"
+                          class="img-fluid"
+                        />
+                        <h6 class="py-2">NWTaco Sonora</h6>
+                      </a>
+                      <p class="small">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sed in consequat tortor.
+                      </p>
+                    </li>
+                    <li class="px-3">
+                      <a href="articulos.html" class="text-secondary">
+                        <img
+                          src="assets/img/TacosJohnny.jpg"
+                          alt="Taqueria"
+                          class="img-fluid"
+                        />
+                        <h6 class="py-2">Tacos Johnny</h6>
+                      </a>
+                      <p class="small">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sed in consequat tortor.
+                      </p>
+                    </li>
+                    <li class="px-3">
+                      <a href="articulos.html" class="text-secondary">
+                        <img
+                          src="assets/img/TaqueriaLosReportados.png"
+                          alt="Taqueria"
+                          class="img-fluid"
+                        />
+                        <h6 class="py-2">Taqueria Los Reportados</h6>
+                      </a>
+                      <p class="small">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sed in consequat tortor.
+                      </p>
+                    </li>
+                  </ul>
+                  <a class="prev" href="#">
+                    <i class="fas fa-angle-left text-muted"></i>
+                  </a>
+                  <a class="next" href="#">
+                    <i class="fas fa-angle-right text-muted"></i>
+                  </a>
+                </div>
+
+                <div class="controller">
+                  <div class="indicate-area"></div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <!--Columna Der-->
+          <div class="d-none d-md-block pt-md-4 pt-lg-0 col-md-4 col-lg-3">
+            <!--Publicidad-->
+            <div class="my-4">
+              <img src="assets/img/Anuncio.jpg" class="img-fluid" />
+            </div>
+
+            <!--Articulos relacionados-->
+
+            <div class="my-4">
+              <h4>Taquerias Del Norte</h4>
+
+              <div class="d-flex my-3">
+                <div class="w-100 x-xl-50 pr-3 pt-2">
+                  <img
+                    src="assets/img/NWTacoSonora1.png"
+                    alt="Lorem ipsum dolor sit amet"
+                    class="img-fluid"
+                  />
+                </div>
+
+                <div>
+                  <p class="small">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    in consequat tortor.
+                  </p>
+                </div>
+              </div>
+
+              <div class="d-flex my-3">
+                <div class="w-100 x-xl-50 pr-3 pt-2">
+                  <img
+                    src="assets/img/TacosJohnny.jpg"
+                    alt="Lorem ipsum dolor sit amet"
+                    class="img-fluid"
+                  />
+                </div>
+
+                <div>
+                  <p class="small">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    in consequat tortor.
+                  </p>
+                </div>
+              </div>
+
+              <div class="d-flex my-3">
+                <div class="w-100 x-xl-50 pr-3 pt-2">
+                  <img
+                    src="assets/img/TaqueriaTaCarbon.jpg"
+                    alt="Lorem ipsum dolor sit amet"
+                    class="img-fluid"
+                  />
+                </div>
+
+                <div>
+                  <p class="small">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    in consequat tortor.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!--Publicidad-->
+            <div class="my-4">
+              <img src="assets/img/Anuncio2.jpeg" class="img-fluid" />
+            </div>
+
+            <div class="my-4">
+              <img src="assets/img/Anuncio.gif" class="img-fluid" />
+            </div>
+
+            <div class="my-4">
+              <img src="assets/img/Anuncio5.gif" class="img-fluid" />
+            </div>
+            <div class="my-4">
+              <img src="assets/img/Anuncio2.gif" class="img-fluid" />
+            </div>
+            <div class="my-4">
+              <img src="assets/img/Anuncio6.gif" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Footer-->
+    <footer class="container-fluid py-5 d-none d-md-block">
+      <div class="container">
+        <div class="row">
+          <!--GridCategorias-->
+          <div class="col-md-7 col-lg-6">
+            <div class="p-1 gridFooter">
+              <div class="container p-0">
+                <div class="d-flex">
+                  <div class="d-flex flex-column columna1">
+                    <figure class="p-2 m-0 bg-info photo1">
+                      <p class="text-uppercase p-1 p-md-2 p-xl-1 small">
+                        Tac1o Real
+                      </p>
+                    </figure>
+                    <figure class="p-2 m-0 bg-warning photo2">
+                      <p class="text-uppercase p-1 p-md-2 p-xl-1 small">
+                        NW Tacos
+                      </p>
+                    </figure>
+                  </div>
+
+                  <div class="d-flex flex-column flex-fill columna2">
+                    <div class="d-block d-md-flex">
+                      <figure class="p-2 m-0 bg-success flex-fill photo3">
+                        <p class="text-uppercase p-1 p-md-2 p-xl-1 small">
+                          Johnny's
+                        </p>
+                      </figure>
+                      <figure class="p-2 m-0 bg-primary flex-fill photo4">
+                        <p class="text-uppercase p-1 p-md-2 p-xl-1 small">
+                          El Chino
+                        </p>
+                      </figure>
+                    </div>
+                    <figure class="p-2 m-0 bg-danger photo5">
+                      <p class="text-uppercase p-1 p-md-2 p-xl-1 small">
+                        Irazema
+                      </p>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-none d-lg-block col-lg-1 col-xl-2"></div>
+          <!--NewsLetter-->
+          <div class="col-md-5 col-lg-5 col-xl-4 pt-5">
+            <h6 class="text-black-50">Inscribete en nuestro NewsLetter:</h6>
+
+            <div class="input-group my-4">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Ingresa tu Email"
+              />
+
+              <div class="input-group-append">
+                <span class="input-group-text bg-dark text-white"
+                  >Inscribirse</span
+                >
+              </div>
+            </div>
+
+            <button class="social-button">
+              <i class="fa-brands fa-facebook fb"></i>
+            </button>
+            <button class="social-button">
+              <i class="fa-brands fa-square-instagram ig"></i>
+            </button>
+            <button class="social-button">
+              <i class="fa-brands fa-twitter tw"></i>
+            </button>
+            <button class="social-button">
+              <i class="fa-solid fa-envelope gm"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--MobileFooter-->
+    <footer>
+      <div class="footer">
+        <button class="social-button">
+          <i class="fa-brands fa-facebook fb"></i>
+        </button>
+        <button class="social-button">
+          <i class="fa-brands fa-square-instagram ig"></i>
+        </button>
+        <button class="social-button">
+          <i class="fa-brands fa-twitter tw"></i>
+        </button>
+        <button class="social-button">
+          <i class="fa-solid fa-envelope gm"></i>
+        </button>
+      </div>
+    </footer>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://kit.fontawesome.com/e6f4c807b3.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="js/jQuery.js"></script>
+  <script src="js/popper.min.js"></script>
+  <!-- <script src="js/jquery.slim.min.js"></script> -->
+  <script src="js/Plugins/jquery.jdSlider-latest.js"></script>
+  <script src="js/pagination.min.js"></script>
+  <script
+    src="https://kit.fontawesome.com/4dc9a857d5.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="js/Plugins/jquery.superscrollorama.js"></script>
+  <script src="js/Plugins/jquery.easing.js"></script>
+  <script src="js/Plugins/scrollUP.js"></script>
+
+  <script src="js/Plugins/TweenMax.min.js"></script>
+  <script src="js/script.js"></script>
+</html>

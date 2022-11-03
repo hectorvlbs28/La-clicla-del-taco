@@ -29,6 +29,25 @@ $(".pagination").twbsPagination({
     next: '<i class ="fas fa-angle-right"></i>'
 });
 
+/*======================================
+Banner
+========================================*/
+
+$(".fade-slider").jdSlider({
+
+	isSliding: false,
+	isAuto: true,
+	isLoop: true,
+	isDrag: false,
+	interval: 5000,
+	isCursor: false,
+	speed: 3000
+});
+
+var alturaBanner = $(".fade-slider").height();
+
+$(".bannerEstatico").css({"height":alturaBanner+"px"})
+
 /*================================
 Scroll
 ==================================*/
@@ -104,3 +123,20 @@ function funcionForEach(item, index){
 }
 
 */
+/*================================
+Deslizador de Articulos
+==================================*/
+
+$(".deslizadorArticulos").jdSlider({
+    wrap: ".slide-inner",
+    slideShow: 3,
+    slideToScroll:3,
+    isLoop:true,
+    responsive: [{
+        viewSize:-320,
+        settings: {
+            slideShow: 1,
+            slideToScroll: 1
+        }
+    }]
+})
