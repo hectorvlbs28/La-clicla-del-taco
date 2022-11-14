@@ -51,7 +51,7 @@
 
     <nav class="navbar navbar-expand-sm header">
       <div class="container-fluid p-2">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.html">
           <img
             src="./assets/img/Logo.png"
             alt="La clica del taco."
@@ -73,14 +73,24 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <button class="menu-text-button d-sm-none d-md-block" href="#">
+          
+          <button class="menu-text-button d-sm-none d-md-block" href="index.html">
             Inicio
           </button>
 
-          <button class="menu-text-button d-sm-none d-md-block" href="#">
-            Inicio
-          </button>
-
+          
+            <button class="menu-text-button d-sm-none d-lg-block" href="categorias.html">
+              Taquerias Norte
+            </button>
+          
+            <button class="menu-text-button d-sm-none d-lg-block" href="categorias.html">
+              Taquerias Centro
+            </button>
+          
+         <button class="menu-text-button d-sm-none d-lg-block" href="categorias.html">
+              Taquerias Sur
+            </button>
+          
           <button class="menu-text-button" style="width: 150px" href="#">
             Sobre nosotros
           </button>
@@ -188,13 +198,15 @@
                         border: none;
                       "
                     >
-                      <button
-                        class="menu-text-button"
-                        style="width: 60%"
-                        href="#"
+                      <a href="categorias.html"
+                        ><button
+                          class="menu-text-button"
+                          style="width: 100%"
+                          href="categorias.html"
+                        >
+                          <h4>Taquerias zona norte</h4>
+                        </button></a
                       >
-                        <h4>Taquerias zona norte</h4>
-                      </button>
                     </th>
                     <th
                       scope="row"
@@ -207,13 +219,15 @@
                         border: none;
                       "
                     >
+                    <a href="categorias.html"
+                        >
                       <button
                         class="menu-text-button"
-                        style="width: 60%"
+                        style="width: 100%"
                         href="#"
                       >
                         <h4>Taquerias zona centro</h4>
-                      </button>
+                      </button></a>
                     </th>
                     <th
                       scope="row"
@@ -226,13 +240,15 @@
                         border: none;
                       "
                     >
+                    <a href="categorias.html"
+                        >
                       <button
                         class="menu-text-button"
-                        style="width: 60%"
+                        style="width: 100%"
                         href="#"
                       >
                         <h4>Taquerias zona sur</h4>
-                      </button>
+                      </button></a>
                     </th>
                     <th
                       scope="row"
@@ -305,7 +321,7 @@
           </li>
 
           <li class="breadcrumb-item">
-            <a href="categorias.html">Taquerias Norte</a>
+            <a href="categorias.html">Taquerias Zona Norte</a>
           </li>
           <li class="breadcrumb-item active">Taco Real</li>
         </ul>

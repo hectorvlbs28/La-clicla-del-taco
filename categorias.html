@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>La clicla del taco</title>
+
+    <link rel="icon" href="img/icono.jpg" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/boostrap/4.1.3/css/boostrap.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Chewy|Open+Sans:300,400" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://fontawesome.com/realeses/v5.6.0/css/all.css"
+      integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h"
+      crossorigin="
+			anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&family=Merriweather+Sans:wght@300&family=Qwitcher+Grypen&family=Roboto+Mono:wght@100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!--PreLoad--
+    <div id="preload">
+      <div id="porcentajeCarga">0%</div>
+      <div id="lineaCarga">
+        <div id="rellenoCarga"></div>
+      </div>
+      <div id="estadoCarga"></div>
+    </div>
+    Preload-->
+
+    <nav class="navbar navbar-expand-sm header">
+        <div class="container-fluid p-2">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="./assets/img/Logo.png"
+              alt="La clica del taco."
+              width="204"
+              height="106"
+              class="rounded"
+            />
+          </a>
+  
+          <button
+            class="navbar-toggler bars-button"
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-bars fa-2xl bars-button"></i>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <button class="menu-text-button d-sm-none d-md-block" href="index.html">
+              Inicio
+            </button>
+  
+            
+              <button class="menu-text-button d-sm-none d-lg-block" href="categorias.html">
+                Taquerias Norte
+              </button>
+            
+              <button class="menu-text-button d-sm-none d-lg-block" href="categorias.html">
+                Taquerias Centro
+              </button>
+            
+           <button class="menu-text-button d-sm-none d-lg-block" href="categorias.html">
+                Taquerias Sur
+              </button>
+            
+            <button class="menu-text-button" style="width: 150px" href="#">
+              Sobre nosotros
+            </button>
+  
+            <button
+              class="menu-text-button"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+            >
+              Menú
+            </button>
+  
+            <div
+              class="mt-2"
+              style="
+                width: 150px;
+                height: 6vh;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <div class="d-sm-none d-md-block">
+                <button class="social-button">
+                  <i class="fa-brands fa-facebook fb"></i>
+                </button>
+                <button class="social-button">
+                  <i class="fa-brands fa-square-instagram ig"></i>
+                </button>
+                <button class="social-button">
+                  <i class="fa-brands fa-twitter tw"></i>
+                </button>
+                <button class="social-button">
+                  <i class="fa-solid fa-envelope gm"></i>
+                </button>
+              </div>
+            </div>
+  
+            <div class="pr-4 pr-lg-5 mt-2">
+              <i
+                class="fas fa-search lead"
+                data-bs-toggle="collapse"
+                data-bs-target="#buscador"
+              ></i>
+            </div>
+  
+            <div id="buscador" class="collapse">
+              <div class="input-group float-right w-100 ml-4">
+                <form class="d-flex">
+                  <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Buscar"
+                    aria-label="Search"
+                  />
+                  <button
+                    class="btn btn-danger menu-text find-button"
+                    type="submit"
+                  >
+                    Buscar
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    <!-- Banner -->
+    <div class="container-fluid p-0 banner">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <div class="carousel slide" id="carouselExampleIndicators" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./assets/img/TacoReal.jpg" class="d-block w-100" alt="..." />
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/img/TaqueriaTaCarbon.jpg" class="d-block w-100" alt="..." />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade bg-none"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog bg-none">
+        <div class="modal-content">
+          <div class="custom-modal">
+            <div class="modal-header" style="border: none">
+              <h2 class="modal-title" id="exampleModalLabel">Menú</h2>
+              <button
+                type="button"
+                class="btn-close text-dark"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body" style="border: none">
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <th
+                      scope="row"
+                      style="
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        border: none;
+                      "
+                    >
+                      <a href="categorias.html"
+                        ><button
+                          class="menu-text-button"
+                          style="width: 100%"
+                          href="categorias.html"
+                        >
+                          <h4>Taquerias zona norte</h4>
+                        </button></a
+                      >
+                    </th>
+                    <th
+                      scope="row"
+                      style="
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        border: none;
+                      "
+                    >
+                    <a href="categorias.html"
+                        >
+                      <button
+                        class="menu-text-button"
+                        style="width: 100%"
+                        href="#"
+                      >
+                        <h4>Taquerias zona centro</h4>
+                      </button></a>
+                    </th>
+                    <th
+                      scope="row"
+                      style="
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        border: none;
+                      "
+                    >
+                    <a href="categorias.html"
+                        >
+                      <button
+                        class="menu-text-button"
+                        style="width: 100%"
+                        href="#"
+                      >
+                        <h4>Taquerias zona sur</h4>
+                      </button></a>
+                    </th>
+                    <th
+                      scope="row"
+                      style="
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        border: none;
+                      "
+                    >
+                      <button
+                        class="menu-text-button"
+                        style="width: 60%"
+                        href="#"
+                      >
+                        <h4>Sobre nosotros</h4>
+                      </button>
+                    </th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer" style="border: none">
+              <div
+                style="
+                  width: 100%;
+                  height: 5vh;
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <div>
+                  <button class="social-button">
+                    <i class="fa-brands fa-facebook fb"></i>
+                  </button>
+                  <button class="social-button">
+                    <i class="fa-brands fa-square-instagram ig"></i>
+                  </button>
+                  <button class="social-button">
+                    <i class="fa-brands fa-twitter tw"></i>
+                  </button>
+                  <button class="social-button">
+                    <i class="fa-solid fa-envelope gm"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Contenido Blog-->
+    <div class="container-fluid bg-white contenidoInicio pb-4">
+      <div class="container">
+        <!--BreadCrumb-->
+        <a href="index.html">
+            <button class="d-block d-sm-none btn btn-info btn-sm mb-2">
+              Regresar
+            </button>
+          </a>
+  
+          <ul class="breadcrumb bg-white p-0 mb-2 mb-md-4">
+            <li class="breadcrumb-item inicio"><a href="index.html">Inicio</a></li>
+            <li class="breadcrumb-item active">Taquerias Zona Norte</li>
+          </ul>
+
+        <div class="row">
+          <!--Columna Izq-->
+          <div class="col-12 col-md-8 col-lg-9 p-0 pr-lg-5">
+            <!--Articulo 1-->
+            <div class="row">
+              <div class="col-12 col-lg-5">
+                <h5 class="d-block d-lg-none py-3">Taqueria "Taco Real"</h5>
+
+                <img src="assets/img/TacoReal.jpg" alt="Taco Real" class="img-fluid" width="100%" />
+              </div>
+
+              <div class="col-12 col-lg-7 introArticulo">
+                <h4 class="d-none d-lg-block">Taqueria "Taco Real"</h4>
+
+                <p class="my-2 my-lg-5">
+                  La barra de ingredientes y el servicio siempre excelente. El sabor de los tacos desafortunadamente ha
+                  ido decayendo, considerando el precio, y las tortillas que utilizan se rompen muy fácil. El “pastor”
+                  sabe más bien a carne de res adobada, y las tortillas de maíz, en esta ocasión, fue muy notorio que ya
+                  estaban un poco pasadas
+                </p>
+
+                <a href="articulos.html" class="float-right">Leer Mas</a>
+
+                <!--
+                <div class="fecha">30.09.2022</div>
+                -->
+              </div>
+            </div>
+
+            <hr class="mb-4 mb-lg-5" style="border: 1px solid #79ff39" />
+
+            <!--Articulo 2-->
+            <div class="row">
+              <div class="col-12 col-lg-5">
+                <h5 class="d-block d-lg-none py-3">Ta'Carbon Hermosillo</h5>
+
+                <img src="assets/img/TaqueriaTaCarbon.jpg" alt="TaqueriaTaCarbon" class="img-fluid" width="100%" />
+              </div>
+
+              <div class="col-12 col-lg-7 introArticulo">
+                <h4 class="d-none d-lg-block">Ta'Carbon Hermosillo</h4>
+
+                <p class="my-2 my-lg-5">
+                  Deliciosos tacos de carne asada y al pastor ubicados al norte de la ciudad Hermosillo por el Boulevard
+                  López Portillo. Cuentan con una gran variedad de platillos del menú como lo son los tradicionales
+                  tacos de carne asada, así como las Lorenza (tostada con carne y queso) los caramelos (carne y queso)
+                  los tacos al pastor las quesadillas con carne tortas...
+                </p>
+
+                <a href="#" class="float-right">Leer Mas</a>
+
+                <!--
+                <div class="fecha">30.09.2022</div>
+                -->
+              </div>
+            </div>
+
+            <hr class="mb-4 mb-lg-5" style="border: 1px solid #79ff39" />
+
+            <!--Publicidad-->
+            <div class="d-block d-lg-none">
+              <img src="assets/img/Anuncio2.jpeg" class="img-fluid" width="100%" />
+            </div>
+
+            <!--Articulo3-->
+            <div class="row">
+              <div class="col-12 col-lg-5">
+                <h5 class="d-block d-lg-none py-3">NW Taco Sonora</h5>
+
+                <img
+                  src="assets/img/NWTacoSonora2.png"
+                  alt="Lorem ipsum dolor sit amet"
+                  class="img-fluid"
+                  width="100%"
+                />
+              </div>
+
+              <div class="col-12 col-lg-7 introArticulo">
+                <h4 class="d-none d-lg-block">NW Taco Sonora</h4>
+
+                <p class="my-2 my-lg-5">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in consequat tortor. Suspendisse ut
+                  euismod orci, vel facilisis turpis. Quisque eu quam lacus.
+                </p>
+
+                <a href="#" class="float-right">Leer Mas</a>
+
+                <!--
+                <div class="fecha">30.09.2022</div>
+                -->
+              </div>
+            </div>
+
+            <hr class="mb-4 mb-lg-5" style="border: 1px solid #79ff39" />
+
+            <!--Articulo4-->
+            <div class="row">
+              <div class="col-12 col-lg-5">
+                <h5 class="d-block d-lg-none py-3">Taqueria Irazema</h5>
+
+                <img src="assets/img/TaqueriaIrazema.png" alt="TaqueriaIrazema" class="img-fluid" width="100%" />
+              </div>
+
+              <div class="col-12 col-lg-7 introArticulo">
+                <h4 class="d-none d-lg-block">Taqueria Irazema</h4>
+
+                <p class="my-2 my-lg-5">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in consequat tortor. Suspendisse ut
+                  euismod orci, vel facilisis turpis. Quisque eu quam lacus.
+                </p>
+
+                <a href="#" class="float-right">Leer Mas</a>
+
+                <!--
+                <div class="fecha">30.09.2022</div>
+                -->
+              </div>
+            </div>
+
+            <hr class="mb-4 mb-lg-5" style="border: 1px solid #79ff39" />
+
+            <!--Articulo5-->
+            <div class="row">
+              <div class="col-12 col-lg-5">
+                <h5 class="d-block d-lg-none py-3">Tacos de cabeza "Johnny"</h5>
+
+                <img src="assets/img/TacosJohnny.jpg" alt="TacosJohnny" class="img-fluid" width="100%" />
+              </div>
+
+              <div class="col-12 col-lg-7 introArticulo">
+                <h4 class="d-none d-lg-block">Tacos de cabeza "Johnny"</h4>
+
+                <p class="my-2 my-lg-5">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in consequat tortor. Suspendisse ut
+                  euismod orci, vel facilisis turpis. Quisque eu quam lacus.
+                </p>
+
+                <a href="#" class="float-right">Leer Mas</a>
+
+                <!--
+                <div class="fecha">30.09.2022</div>
+                -->
+              </div>
+            </div>
+
+            <hr class="mb-4 mb-lg-5" style="border: 1px solid #79ff39" />
+
+            <!--Paginacion-->
+            <div class="container d-none d-md-block">
+              <ul class="pagination justify-content-center"></ul>
+            </div>
+          </div>
+
+          <!--Columna Der-->
+          <div class="d-none d-md-block pt-md-4 pt-lg-0 col-md-4 col-lg-3">
+
+            <!--Publicidad-->
+            <div class="my-4">
+              <img src="assets/img/Anuncio.jpg" class="img-fluid" />
+            </div>
+
+            <!--Taquerias Destacadas-->
+            <div class="my-4">
+              <h4>Taquerias Destacadas</h4>
+
+              <div class="d-flex my-3">
+                <div class="w-100 x-xl-50 pr-3 pt-2">
+                    <a href="articulos.html"><p class="text-secondary">Tacos Johnny</p></a>
+                  <img src="assets/img/TacosJohnny.jpg" alt="Lorem ipsum dolor sit amet" class="img-fluid" />
+                </div>
+              </div>
+
+              <div class="d-flex my-3">
+                <div class="w-100 x-xl-50 pr-3 pt-2">
+                    <a href="articulos.html"><p class="text-secondary">Taqueria Los Sureños</p></a>
+                  <img src="assets/img/TaqueriaLosSurenos.jpg" alt="Lorem ipsum dolor sit amet" class="img-fluid" />
+                </div>
+
+                
+              </div>
+
+              <div class="d-flex my-3">
+                <div class="w-100 x-xl-50 pr-3 pt-2">
+                    <a href="articulos.html"><p class="text-secondary">Ta Carbon</p></a>
+                  <img src="assets/img/TaqueriaTaCarbon.jpg" alt="Lorem ipsum dolor sit amet" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+
+            <!--Publicidad-->
+            <div class="my-4">
+              <img src="assets/img/Anuncio.gif" class="img-fluid" />
+            </div>
+
+            <div class="my-4">
+              <img src="assets/img/Anuncio5.gif" class="img-fluid" />
+            </div>
+
+            <div class="my-4">
+              <img src="assets/img/Anuncio2.gif" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Footer-->
+    <footer class="container-fluid py-5 d-none d-md-block">
+      <div class="container">
+        <div class="row">
+          <!--GridCategorias-->
+          <div class="col-md-7 col-lg-6">
+            <div class="p-1 gridFooter">
+              <div class="container p-0">
+                <div class="d-flex">
+                  <div class="d-flex flex-column columna1">
+                    <figure class="p-2 m-0 bg-info photo1">
+                      <p class="text-uppercase p-1 p-md-2 p-xl-1 small">Tac1o Real</p>
+                    </figure>
+                    <figure class="p-2 m-0 bg-warning photo2">
+                      <p class="text-uppercase p-1 p-md-2 p-xl-1 small">NW Tacos</p>
+                    </figure>
+                  </div>
+
+                  <div class="d-flex flex-column flex-fill columna2">
+                    <div class="d-block d-md-flex">
+                      <figure class="p-2 m-0 bg-success flex-fill photo3">
+                        <p class="text-uppercase p-1 p-md-2 p-xl-1 small">Johnny's</p>
+                      </figure>
+                      <figure class="p-2 m-0 bg-primary flex-fill photo4">
+                        <p class="text-uppercase p-1 p-md-2 p-xl-1 small">El Chino</p>
+                      </figure>
+                    </div>
+                    <figure class="p-2 m-0 bg-danger photo5">
+                      <p class="text-uppercase p-1 p-md-2 p-xl-1 small">Irazema</p>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-none d-lg-block col-lg-1 col-xl-2"></div>
+          <!--NewsLetter-->
+          <div class="col-md-5 col-lg-5 col-xl-4 pt-5">
+            <h6 class="text-black-50">Inscribete en nuestro NewsLetter:</h6>
+
+            <div class="input-group my-4">
+              <input type="text" class="form-control" placeholder="Ingresa tu Email" />
+
+              <div class="input-group-append">
+                <span class="input-group-text bg-dark text-white">Inscribirse</span>
+              </div>
+            </div>
+
+            <button class="social-button"><i class="fa-brands fa-facebook fb"></i></button>
+            <button class="social-button"><i class="fa-brands fa-square-instagram ig"></i></button>
+            <button class="social-button"><i class="fa-brands fa-twitter tw"></i></button>
+            <button class="social-button"><i class="fa-solid fa-envelope gm"></i></button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--MobileFooter-->
+    <footer>
+      <div class="footer">
+        <button class="social-button"><i class="fa-brands fa-facebook fb"></i></button>
+        <button class="social-button"><i class="fa-brands fa-square-instagram ig"></i></button>
+        <button class="social-button"><i class="fa-brands fa-twitter tw"></i></button>
+        <button class="social-button"><i class="fa-solid fa-envelope gm"></i></button>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://kit.fontawesome.com/e6f4c807b3.js" crossorigin="anonymous"></script>
+    <script src="js/popper.min.js"></script>
+    <!-- <script src="js/jquery.slim.min.js"></script> -->
+    <script src="js/jQuery.js"></script>
+    <script src="js/Plugins/jquery.jdSlider-latest.js"></script>
+    <script src="js/pagination.min.js"></script>
+    <script src="https://kit.fontawesome.com/4dc9a857d5.js" crossorigin="anonymous"></script>
+    <script src="js/Plugins/jquery.superscrollorama.js"></script>
+    <script src="js/Plugins/jquery.easing.js"></script>
+    <script src="js/Plugins/scrollUP.js"></script>
+
+    <script src="js/Plugins/TweenMax.min.js"></script>
+  </body>
+  <script src="js/script.js"></script>
+</html>
