@@ -72,7 +72,7 @@ $.scrollUp({
 
 /*================================
 Preload
-==================================
+==================================*/
 
 $("body").css({"overflow-y":"hidden"});
 
@@ -122,7 +122,7 @@ function funcionForEach(item, index){
 
 }
 
-*/
+
 /*================================
 Deslizador de Articulos
 ==================================*/
@@ -139,4 +139,15 @@ $(".deslizadorArticulos").jdSlider({
             slideToScroll: 1
         }
     }]
+})
+
+/*================================
+Bloqueador Acciones de click derecho y F12
+==================================*/
+document.oncontextmenu = function(){return false};
+
+$(document).keydown(function(event){
+    if(event.keyCode == "123"){
+        event.preventDefault()
+    }
 })
